@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import ProfileComponent from "./profile/ProfileComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+var fullName= {firstName:'Imen ', lastName:'Tlili'}
+const bio='DM me'
+let profession= 'Full Stack Developer'
+
+const handelName=(name)=>{
+alert(`Hello!I'am ${name}`)
+}
+
+
+
+
+return (
+    
+    <div>
+
+      <ProfileComponent fullName={fullName} bio={bio} profession={profession} handelName={handelName}>
+       
+       <img src='./photoProfil.jpg' alt="myPhoto" width='200' borderRaduis='50%'/>
+        
+      </ProfileComponent>
+       
     </div>
   );
 }
